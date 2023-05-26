@@ -1,17 +1,9 @@
 const Joi = require("joi");
 
-const productSchema = Joi.object({
-  title: Joi.string().min(3),
-  imgUrl: Joi.string(),
-  description: Joi.string(),
-  price: Joi.number(),
-  store: Joi.string().required(),
-});
-
 const orderSchema = Joi.object({
   name: Joi.string()
     .trim()
-    .pattern(/^[\p{L}_-]+$/u),
+    .pattern(/^[\p{L}_ -]+$/u),
   email: Joi.string()
     .trim()
     .email({ minDomainSegments: 2 })
@@ -24,6 +16,5 @@ const orderSchema = Joi.object({
 });
 
 module.exports = {
-  productSchema,
   orderSchema,
 };
