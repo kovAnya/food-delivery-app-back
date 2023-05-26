@@ -9,7 +9,7 @@ const product = mongoose.Schema(
         "https://cdn.pixabay.com/photo/2012/04/26/13/06/shopping-card-42436_1280.png",
     },
     description: { type: String, default: null },
-    price: { type: Number, default: 0 },
+    price: { type: Number, default: null },
     store: { type: String, default: null },
   },
   {

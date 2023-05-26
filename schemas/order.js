@@ -9,13 +9,10 @@ const order = mongoose.Schema(
     email: {
       type: String,
       required: [true, "Email is required"],
-      unique: true,
     },
     phone: {
       type: String,
       required: [true, "Phone is required"],
-      minlength: 6,
-      maxlength: 20,
     },
     address: { type: String, required: [true, "Address is required"] },
     items: [
@@ -23,12 +20,13 @@ const order = mongoose.Schema(
         id: String,
         title: String,
         imgUrl: String,
+        description: String,
         price: Number,
         quantity: Number,
         store: String,
       },
     ],
-    totalCost: { type: Number, required: true },
+    totalCost: { type: Number },
   },
   {
     timestamps: true,

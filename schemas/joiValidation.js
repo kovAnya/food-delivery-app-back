@@ -1,7 +1,7 @@
 const Joi = require("joi");
 
 const productSchema = Joi.object({
-  title: Joi.string().min(3).required(),
+  title: Joi.string().min(3),
   imgUrl: Joi.string(),
   description: Joi.string(),
   price: Joi.number(),
@@ -9,7 +9,9 @@ const productSchema = Joi.object({
 });
 
 const orderSchema = Joi.object({
-  name: Joi.string().pattern(/^[\p{L}\p{M}_-]+$/u),
+  name: Joi.string()
+    .trim()
+    .pattern(/^[\p{L}_-]+$/u),
   email: Joi.string()
     .trim()
     .email({ minDomainSegments: 2 })
