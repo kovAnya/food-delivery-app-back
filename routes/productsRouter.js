@@ -1,5 +1,5 @@
 const express = require("express");
-const { getProductsByStore } = require("../../controllers");
+const { getProductsByStore } = require("../controllers");
 const asyncHandler = require("express-async-handler");
 
 const router = express.Router();

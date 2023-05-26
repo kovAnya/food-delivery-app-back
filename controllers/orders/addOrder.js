@@ -6,4 +6,4 @@ async function addOrder(req, res) {
   return res.status(201).json(createOrder);
 }
 
-module.exports = addUserNotice;
+module.exports = addOrder;

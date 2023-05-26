@@ -9,4 +9,4 @@ async function getOrderByUser(req, res) {
   return res.status(200).json(searchResult);
 }
 
-module.exports = addUserNotice;
+module.exports = getOrderByUser;
